@@ -9,3 +9,32 @@ body {
   color: grey;
   background: $bg-color;
 }
+
+@mixin msg($color: grey) {
+  background: $color;
+  border-radius: 10px;
+  width: 80%;
+  margin: 50px auto;
+  padding: 20px;
+  color: white;
+  border: 1px solid white;
+
+  &:hover {
+    background: yellowgreen;
+  }
+
+  h1 {
+    margin: 0 0 0.2em 0;
+  }
+}
+
+.msg {
+  @include msg;
+
+  &-info {
+    background: green;
+    &:hover {
+      background: pink;
+    }
+  }
+}
